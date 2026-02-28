@@ -1,98 +1,157 @@
 <!doctype html>
 <html lang="fr">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>-- Portfolio --</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Portfolio — Luca Descombes</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<header>
-			<nav class="navbar">
-				<a href="#home" class="logo"><span>LD.</span></a>
-
-				<ul class="nav-links">
-					<li><a href="#apropos">A propos</a></li>
-					<li><a href="#projets">Projets</a></li>
-					<li><a href="#competence">Compétences</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-
-				<div class="burger">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</nav>
+		<header class="nav">
+			<div class="container nav-inner">
+				<a class="logo" href="#home">Luca<span>Descombes</span></a>
+				<button
+					class="nav-toggle"
+					aria-label="Toggle navigation"
+					aria-expanded="false"
+				>
+					<span class="hamburger"></span>
+				</button>
+				<nav class="nav-menu">
+					<ul>
+						<li><a href="#home">Accueil</a></li>
+						<li><a href="#about">À propos</a></li>
+						<li><a href="#projects">Projets</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+				<button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+			</div>
 		</header>
 
-		<main id="home">
-			<section class="first-sect">
-				<div class="intro">
-					<img
-						src="./assets/iwatani_naofumi_17818.webp"
-						alt="Photo de profil"
-					/>
-					<h1>Luca Descombes</h1>
-					<p>
-						Bonjour ! Je suis Luca Descombes, un jeune développeur web passionné
-						par le jeu vidéo et la musique.
-					</p>
-				</div>
-			</section>
-
-			<section class="second-sect" id="apropos">
-				<h2>A propos</h2>
-				<p>
-					Je me consacre souvent à créer des musiques ou des jeux en tout genre
-					et surtout à réfléchir sur mon jeu "Code Clicker".
-				</p>
-			</section>
-
-			<section class="project-sect" id="projets">
-				<h2>Projets</h2>
-
-				<div class="container">
-					<div class="div-card">
-						<div class="head-card">
-							<img src="./assets/puissance-4.png" alt="Puissance 4" />
-						</div>
-						<div class="body-card">
-							<h3>Puissance 4</h3>
-							<p>Un puissance 4 totalement fonctionnel sur le web.</p>
-
-							<div class="technos">
-								<span>HTML</span>
-								<span>CSS</span>
-								<span>JavaScript</span>
-							</div>
-
-							<a
-								href="https://github.com/LUCA-DesComBes/connect-four-game"
-								target="_blank"
-								>Voir le projet</a
-							>
+		<main>
+			<section id="home" class="hero">
+				<div class="container hero-inner hero-grid">
+					<div class="hero-photo">
+						<!-- Remplace "photo.jpg" par le fichier de ta photo dans le dossier du projet -->
+						<img
+							src="./img/pp.jpeg"
+							alt="Photo de profil"
+							class="profile-photo"
+						/>
+					</div>
+					<div class="hero-text">
+						<h1>Bonjour, je suis <span>Luca Descombes</span></h1>
+						<p class="lead">
+							Développeur front‑end · Designer d'interfaces (novice) · Créateur
+							d'expériences
+						</p>
+						<div class="hero-cta">
+							<a href="#projects" class="btn primary">Voir mes projets</a>
+							<a href="#contact" class="btn outline">Contactez‑moi</a>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="contact-sect" id="contact">
-				<h2>Contact</h2>
+			<section id="about" class="about container">
+				<h2>À propos</h2>
+				<div class="about-grid">
+					<p>
+						Je conçois et développe des interfaces modernes, performantes et
+						accessibles. J'aime transformer des idées en expériences digitales
+						claires et élégantes.
+					</p>
+					<ul>
+						<li><strong>Compétences:</strong> HTML, CSS, JavaScript</li>
+						<li><strong>Design:</strong> UI/UX, Prototypage</li>
+						<li><strong>Outils:</strong> Figma, Git, VS Code</li>
+					</ul>
+				</div>
+			</section>
 
-				<form class="contact-form">
-					<input type="text" name="name" placeholder="Ton nom" required />
-					<input type="email" name="email" placeholder="Ton email" required />
+			<section id="projects" class="projects container">
+				<h2>Projets</h2>
+				<div class="grid">
+					<article class="card">
+						<img src="./img/p1.png" alt="Project 1" />
+						<div class="card-body">
+							<h3>Connect-four-game</h3>
+							<p>
+								Un puissance 4 totalement fonctionnel fais en HTML, CSS et en
+								JS.
+							</p>
+							<a
+								class="card-link"
+								href="https://github.com/LUCA-DesComBes/connect-four-game"
+								target="_blank"
+								>Voir le projet →</a
+							>
+						</div>
+					</article>
+
+					<article class="card">
+						<img src="./img/p2.png" alt="Project 2" />
+						<div class="card-body">
+							<h3>Browser Extension Manager UI</h3>
+							<p>
+								Une application pour gérer ses extension totalement non
+								dynamique.
+							</p>
+							<a
+								class="card-link"
+								href="https://github.com/LUCA-DesComBes/browser-extension-manager-ui"
+								target="_blank"
+								>Voir le projet →</a
+							>
+						</div>
+					</article>
+
+					<article class="card">
+						<img src="./img/p3.png" alt="Project 3" />
+						<div class="card-body">
+							<h3>Galerie d'image</h3>
+							<p>
+								Une galerie d'image totalement fonctionnel faite en HTML, CSS et
+								en JS.
+							</p>
+							<a
+								class="card-link"
+								href="https://github.com/LUCA-DesComBes/carrouselJsAPI"
+								target="_blank"
+								>Voir le projet →</a
+							>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section id="contact" class="contact container">
+				<h2>Contact</h2>
+				<form action="#" class="contact-form">
+					<input type="text" name="name" placeholder="Votre nom" required />
+					<input type="email" name="email" placeholder="Votre email" required />
 					<textarea
 						name="message"
-						placeholder="Ton message"
+						placeholder="Votre message"
+						rows="6"
 						required
 					></textarea>
-					<button type="submit">Envoyer</button>
+					<button class="btn primary" type="submit">Envoyer</button>
 				</form>
 			</section>
 		</main>
 
-		<script src="script.js"></script>
+		<footer class="footer">
+			<div class="container">
+				<p>© 2026 Luca Descombes — Tous droits réservés.</p>
+			</div>
+		</footer>
+
+		<script src="main.js" defer></script>
 	</body>
 </html>
